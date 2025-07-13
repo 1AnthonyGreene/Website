@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Home Page
+        Author: Anthony Greene
+        Date: August 20, 2023   
+        Filename: home.html
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Your custom CSS -->
+    <link href="{{ url_for('static', filename='styles/bmd_styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/home_styles.css') }}" rel="stylesheet">
+
+    <title>Home</title>
+
+    <style>
+      /* Preserve your brand colors */
+      .text-blue {
+        color: #007BFF !important;
+      }
+      .nav-link.text-blue:hover {
+        color: #3399FF !important;
+      }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Header / Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg" style="background-color: #000;">
+        <div class="container-fluid">
+          <a class="navbar-brand text-blue" href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Harry's Towing" style="height: 48px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-blue" href="{{ url_for('home') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-blue" href="{{ url_for('tow') }}">Tow Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-blue" href="{{ url_for('bodyShop') }}">Body Repair Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-blue" href="{{ url_for('about') }}">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 p-4">
+        <h1 class="text-3xl fw-bold mb-4">Harry's Body Shop and Towing</h1>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black-700 text-black p-4 mt-auto">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <div class="contact-info">
+                  <p><strong>Address:</strong> 9401 Old Kings Road S, Jacksonville FL 32257</p>
+                  <p><strong>Phone:</strong> (904) 268-1234</p>
+                  <p><strong>Business Hours:</strong> Mon–Fri: 8am–5pm</p>
+              </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <p>&copy; Harry's Body Shop and Towing. All rights reserved.</p>
+              <p><a class="text-black" href="/sources">Image Sources</a></p>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (for navbar toggle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

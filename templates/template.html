@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+<!--
+    Home Page
+    Author: Anthony Greene
+    Date: August 20, 2023   
+
+    Filename: home.html
+   
+-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="{{ url_for('static', filename='styles/bmd_styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/template_styles.css') }}" rel="stylesheet">
+</head>
+    <title>Home</title>
+    <header class="bg-black-700 text-blue p-4">
+        <div class="flex items-center justify-between">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Harry's Towing" class="h-12">
+            <nav id="top">
+                <ul class="flex gap-4">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('tow') }}">Tow Services</a></li>
+                    <li><a href="{{ url_for('bodyShop') }}">Body Repair Services</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   <h1>Harry's</h1>
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.ogg" type="video/ogg">
+        <track kind="subtitles" src="captions.vtt" srclang="en-US" label="English">
+        Your browser does not support the video tag.
+    </video>
+    
+    <footer>
+        <footer>
+            <div class="footer-left">
+                <div class="contact-info">
+                    <p><strong>Address:</strong> 123 Bakery Street, Cityville</p>
+                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                    <p><strong>Business Hours:</strong> Mon-Fri: 8am-6pm, Sat: 9am-4pm</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>&copy; 2023 Bake My Day. All rights reserved.</p>
+                <p><a href="sources.html">Image Sources</a></p>
+            </div>
+        </footer>
+        
+    </footer>
+</html>

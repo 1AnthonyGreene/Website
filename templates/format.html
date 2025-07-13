@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Tow Company{% endblock %}</title>
+    <link href="bmd_styles.css" rel="stylesheet">
+    <link href="format_styles.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Fast Tow & Roadside</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('services') }}">Services</a>
+            <a href="{{ url_for('about') }}">About</a>
+        </nav>
+    </header>
+
+    <main>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="flash">
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fast Tow & Roadside</p>
+    </footer>
+</body>
+</html>

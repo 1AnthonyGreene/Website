@@ -1,0 +1,98 @@
+main {
+    flex: 1
+}
+
+header {
+    background-color: blue;
+    padding: 20px 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, san-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+nav#top ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    padding: 1rem;
+
+ }
+
+ 
+
+ nav#top img {
+    max-width: 10% ; /* Adjust the percentage to control image size */
+    height: auto ;
+    padding: 2rem ;
+}
+
+nav#top a {
+    list-style: none ;
+    text-decoration: none ;
+    color: blue;
+    font-family: "Arial";
+    text-transform: uppercase ;
+    letter-spacing: -1px ;
+    font-weight: bold;
+    font-size: 24px ;
+    padding-right: 8rem ;
+    margin-left: 4rem;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: darkblue ; 
+    text-decoration: none; 
+    font-weight: none;
+} 
+
+ video {
+      width: 100vw; /* 100% of viewport width */
+      height: calc(100vh - 40px); /* 100% of viewport height minus 40px for controls */
+      display: block;
+      margin: 20px auto; /* Centers the video horizontally */
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr auto; /* Left section takes available space, right section is auto-sized */
+        align-items: center;
+        background-color: blue;
+        color: #fff;
+        padding: 20px;
+        font-size: 14px;
+    }
+    
+    .footer-right {
+        text-align: right;
+    }
+    
+    .footer-right a {
+        color: #fff;
+    }
+    
