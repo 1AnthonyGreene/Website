@@ -57,6 +57,9 @@
               <li class="nav-item">
                 <a class="nav-link text-blue" href="{{ url_for('about') }}">About Us</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link text-blue" href="{{ url_for('contactUs') }}">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -69,14 +72,15 @@
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer -->
+   <!-- Footer -->
     <footer class="bg-black-700 text-black p-4 mt-auto">
         <div class="container">
           <div class="row">
             <div class="col-md-6 mb-3 mb-md-0">
               <div class="contact-info">
                   <p><strong>Address:</strong> 9401 Old Kings Road S, Jacksonville FL 32257</p>
-                  <p><strong>Phone:</strong> (904) 268-1234</p>
+                  <p><strong>Phone:</strong><a href="tel:(904)268-1234"> (904)268-1234</a></p>
+                  <p><strong>Email:</strong><a href="mailto:harrysbodyshopinc@att.net"> harrysbodyshopinc@att.net</a></p>
                   <p><strong>Business Hours:</strong> Mon–Fri: 8am–5pm</p>
               </div>
             </div>

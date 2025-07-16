@@ -34,6 +34,10 @@ def contact():
 def about():
     return render_template('about.html')
 
+@app.route('/contactUs', methods=['GET', "POST"])
+def contactUs():
+    return render_template('contactUs.html')
+
 @app.route('/success', methods=['GET', "POST"])
 def success():
     return render_template('success.html')
