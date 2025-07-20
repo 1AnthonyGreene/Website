@@ -95,4 +95,6 @@ a:hover {
     .footer-right a {
         color: #fff;
     }
-    
+ form{
+    max-width: 50%
+ }
