@@ -15,7 +15,7 @@
 
     <!-- Your custom CSS -->
     <link href="{{ url_for('static', filename='styles/bmd_styles.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='styles/home_styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/about.css') }}" rel="stylesheet">
 
     <title>Home</title>
 
@@ -68,9 +68,32 @@
 
     <!-- Main Content -->
     <main class="flex-grow-1 p-4">
-        <h1 class="text-3xl fw-bold mb-4">Harry's Body Shop and Towing</h1>
-        {% block content %}{% endblock %}
+      <section class = "about-section">
+        <div class = "about-block">
+          <img src="{{ url_for('static', filename='images/group_pic.jpg') }}" alt="family_picture" class ="about-image">
+          <div class = "info-text">
+            <h2>We Are A Family Business</h2>
+            <p>Since 1985, Harry's Body Shop & Towing has been dedicated to providing reliable roadside assistance, high quality paint services, and professional automotive repairs in Jacksonville, FL. Family-owned and operated, our staff is equipped with years of knowledge and experience in body work, towing, and services.</p>
+          </div>
+        </div>
+        <div class = "about-block">
+          <div class = "info-text">
+            <h2><a href = "{{ url_for('bodyShop') }}">Body Shop</a></h2>
+            <p>We do body work</p>
+          </div>
+          <img src="{{ url_for('static', filename='images/Harry.jpg') }}" alt="Harry" class ="about-image">
+        </div>
+        <div class = "about-block">
+          <img src="{{ url_for('static', filename='images/Truck_3_and_4.jpg') }}" alt="family_picture" class ="about-image">
+          <div class = "info-text">
+            <h2><a href = "{{ url_for('tow') }}">Towing</a></h2>
+            <p>Since 1985, Harry's Body Shop & Towing has been dedicated to providing reliable roadside assistance, high quality paint services, and professional automotive repairs in Jacksonville, FL. Family-owned and operated, our staff is equipped with years of knowledge and experience in body work, towing, and services.</p>
+          </div>
+        </div>
+          
+        </div>
     </main>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-black-700 text-black p-4 mt-auto">
@@ -78,8 +101,7 @@
           <div class="row">
             <div class="col-md-6 mb-3 mb-md-0">
               <div class="contact-info">
-                  <p><strong>Address:</strong> 9401 Old Kings Road S, Jacksonville FL 32257</p>
-                  <p><strong>Phone:</strong><a href="tel:(904)268-1234"> (904)268-1234</a></p>
+                  <p><strong>Address:</strong><a href="https://www.google.com/maps/place/Harry's+Body+Shop+%26+Towing/@30.207154,-81.5828345,16z/data=!4m6!3m5!1s0x88e5cbca6ea10be7:0x456de2a555011d41!8m2!3d30.207154!4d-81.5828345!16s%2Fg%2F11c1nx0mnv?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"> 9401 Old Kings Road S, Jacksonville FL 32257</a></p>                  <p><strong>Phone:</strong><a href="tel:(904)268-1234"> (904)268-1234</a></p>
                   <p><strong>Email:</strong><a href="mailto:harrysbodyshopinc@att.net"> harrysbodyshopinc@att.net</a></p>
                   <p><strong>Business Hours:</strong> Mon–Fri: 8am–5pm</p>
               </div>

@@ -2,18 +2,14 @@ from flask import Flask, request, render_template, jsonify, session, redirect, u
 from flask_wtf import FlaskForm
 from flask_mail import Mail, Message
 import os
-"""Google birthday: 5/15/1985
-Harryscontactmail@gmail.com
-YnbdZ%fp52a_
-
-AP: lwyu xzma kbrh doro
-"""
+"""Google birthday: 5/15/1985"""
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'keykeydoyouloveme'
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USERNAME'] = os.environ['Mail_Username']
 app.config['MAIL_PASSWORD'] = os.environ['Mail_Password']
 
@@ -49,29 +45,33 @@ def contact():
 def about():
     return render_template('about.html')
 
-@app.route('/contactUs', methods=['GET', "POST"])
+@app.route('/contactUs', methods=['GET', 'POST'])
 def contactUs():
     if request.method == 'POST':
-        fName = request.form['fName']
-        lName = request.form['lName']
-        if request.form['phone']:
-            phone = request.form['phone']
-        email = request.form['email']
-        message = request.form['message']
+        fName = request.form.get('fName')
+        lName = request.form.get('lName')
+        phone = request.form.get('phone')
+        email = request.form.get('email')
+        message = request.form.get('message')
 
+        fullName = f"{fName} {lName}".strip()
+        msg = Message(
+            subject="New Contact Form Submission",
+            sender=app.config['MAIL_USERNAME'],
+            recipients=['harrysbodyshopinc@att.com']
+        )
+        msg.body = f"From: {fullName} <{email}>\nPhone: {phone}\n\n{message}"
 
-        msg = Message("New Contact Form Submission", 
-                      sender=os.environ['Mail_Username'],
-                      recipients=["harrysbodyshop@att.com"])
-        fullName = fName + " " + lName
-        msg.body = f"From: {fullName} <{email}>\n\n{message}"
+        
         try:
             mail.send(msg)
-            flash("Message sent successfully!", "success")
+            print("Message sent successfully!", "success")
         except Exception as e:
-            flash(f"Failed to send message: {str(e)}", "error")
-        return redirect('contactUs')
+            print(f"Failed to send message: {str(e)}", "error")
         
+
+        return redirect('/contactUs')
+
     return render_template('contactUs.html')
 
 @app.route('/success', methods=['GET', "POST"])
