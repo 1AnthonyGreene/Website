@@ -27,3 +27,51 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #3399FF;
 }
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/*Removes Caret*/ 
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/*Smooth transition effect */
+.dropdown-menu.custom-dropdown{
+  transition: all 0.3s ease;
+  background-color:black;
+  color: blue;
+  border: none;
+}
+
+/* Change link colors */
+.dropdown-menu.custom-dropdown .dropdown-item {
+  color: #007BFF;
+}
+
+.dropdown-menu.custom-dropdown .dropdown-item:hover{
+  background-color:black;
+  color: #3399FF;
+}
+
+
+.image-background {
+  background-image: url("C:\Users\asgre\Documents\GitHub\Website\static\images\Truck_3_and_4.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Or however tall you want */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+  padding: 2rem;
+  border-radius: 8px;
+}

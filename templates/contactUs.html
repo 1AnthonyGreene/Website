@@ -48,13 +48,15 @@
               <li class="nav-item">
                 <a class="nav-link text-blue" href="{{ url_for('home') }}">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-blue" href="{{ url_for('tow') }}">Tow Services</a>
+
+              <!--Service Dropdown Menu-->
+              <li class="nav-item dropdown">
+                <a class="nav-link text-blue dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                <ul class ="dropdown-menu custom-dropdown dropdown-menu-dark">
+                  <li><a class ="dropdown-item" href="{{ url_for('tow') }}">Tow Services</a></li>
+                  <li><a class ="dropdown-item" href="{{ url_for('bodyShop') }}">Body Shop Services</a></li> 
+                </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-blue" href="{{ url_for('bodyShop') }}">Body Repair Services</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link text-blue" href="{{ url_for('about') }}">About Us</a>
               </li>
               <li class="nav-item">
@@ -62,6 +64,7 @@
               </li>
             </ul>
           </div>
+
         </div>
       </nav>
     </header>
@@ -111,7 +114,6 @@
             </div>
             <div class="col-md-6 text-md-end">
               <p>&copy; Harry's Body Shop and Towing. All rights reserved.</p>
-              <p><a class="text-black" href="/sources">Image Sources</a></p>
             </div>
           </div>
         </div>

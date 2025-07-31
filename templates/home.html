@@ -48,11 +48,14 @@
               <li class="nav-item">
                 <a class="nav-link text-blue" href="{{ url_for('home') }}">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-blue" href="{{ url_for('tow') }}">Tow Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-blue" href="{{ url_for('bodyShop') }}">Body Repair Services</a>
+
+              <!--Service Dropdown Menu-->
+              <li class="nav-item dropdown">
+                <a class="nav-link text-blue dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                <ul class ="dropdown-menu custom-dropdown dropdown-menu-dark">
+                  <li><a class ="dropdown-item" href="{{ url_for('tow') }}">Tow Services</a></li>
+                  <li><a class ="dropdown-item" href="{{ url_for('bodyShop') }}">Body Shop Services</a></li> 
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-blue" href="{{ url_for('about') }}">About Us</a>
@@ -65,6 +68,14 @@
         </div>
       </nav>
     </header>
+
+  <!-- Background Image Div -->
+  <div class = "image-background">
+    <div class = "overlay">
+      <h1>Harry's Body Shop and Towing</h1>
+    </div>
+  </div>
+
     <!-- Slideshow images -->
 <div id="slideshowIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -118,7 +129,6 @@
             </div>
             <div class="col-md-6 text-md-end">
               <p>&copy; Harry's Body Shop and Towing. All rights reserved.</p>
-              <p><a class="text-black" href="/sources">Image Sources</a></p>
             </div>
           </div>
         </div>
