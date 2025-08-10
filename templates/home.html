@@ -105,16 +105,34 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+<!--Towing Service Row-->
+<section>
+  <h1 class="text-3xl fw-bold mb-4">Harry's Body Shop and Towing</h1>
+        {% block content %}{% endblock %}
+        <div class="row">
+          <div class="col-lg-4">
+          <img class="rounded-circle" src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "140px" width="140px">
+            <h2>Service Towing</h2>
+            <p>Filler Text</p>
+          </div>
+          <div class="col-lg-4">
+          <img class="rounded-circle" src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "140px" width="140px">
+            <h2>Accident Recovery</h2>
+            <p>Filler Text</p>
+          </div>
+          <div class="col-lg-4">
+          <img class="rounded-circle" src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "140px" width="140px">
+            <h2>Heavy Duty Towing</h2>
+            <p>Filler Text</p>
+        </div>
+      </section>
 <!-- Service Row-->
  <div class = "service row">
   <div class = "row">
     <img class = "rounded circle" src="">
     </div>
   </div>
-    <!-- Main Content -->
-    <main class="flex-grow-1 p-4">
-        {% block content %}{% endblock %}
-    </main>
 
     <!-- Footer -->
     <footer class="bg-black-700 text-black p-4 mt-auto">

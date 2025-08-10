@@ -2,7 +2,39 @@ h1 {
   text-align: center;  
 }
 
-img{
-  width: 250px;
-  height: 250px;
+.about-block{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-block-reverse{
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.about-image{
+  max-width: 45%;
+  height: auto;
+  border-radius: 8px; 
+  object-position: left;
+}
+
+.about-image-reverse{
+  max-width: 45%;
+  height: auto;
+  border-radius: 8px; 
+  object-position: right;
+}
+
+.info-text{
+  flex: 1;
+  min-width: 250px;
+}
+.about-class{
+  animation-name: slide-in;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+   
 }

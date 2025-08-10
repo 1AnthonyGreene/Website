@@ -15,7 +15,7 @@
 
     <!-- Your custom CSS -->
     <link href="{{ url_for('static', filename='styles/bmd_styles.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='styles/home_styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/body_styles.css') }}" rel="stylesheet">
 
     <title>Home</title>
 
@@ -71,27 +71,32 @@
 
     <!-- Main Content -->
     <main class="flex-grow-1 p-4">
-        <h1 class="text-3xl font-bold mb-4">Harry's Body Shop and Towing</h1>
-        {% block content %}{% endblock %}
-        <p1>
-            <header>Collision</header>
-            We understand that accidents are difficult. Our friendly and knoweldgable team are here to help you thruogh the process. 
-            We work fast and efficently to get your car back on the road in working repair.
-               </p1>
-        <p2>
-            <header>Auto Body</header>
-            Got a dent? Headlight not working? Window Stuck? We can fix it!
-        </p2>
-        <p3>
-            <header>Paint</header>
-            Whether you need a new coat of paint, covering a scratch or looking to switch things up
-            our painting expert will get you the color you're looking for. 
-        </p3>
-        <p4>
-            <header>Free Estimate</header>
-            Come In For A Free Estimate Today!
-        </p4>
+      <section class = "about-section">
+        <div class = "about-block">
+          <img src="{{ url_for('static', filename='images/group_pic.jpg') }}" alt="family_picture" class ="about-image">
+          <div class = "info-text">
+            <h2>We Are A Family Business</h2>
+            <p>Since 1985, Harry's Body Shop & Towing has been dedicated to providing reliable roadside assistance, high quality paint services, and professional automotive repairs in Jacksonville, FL. Family-owned and operated, our staff is equipped with years of knowledge and experience in body work, towing, and services.</p>
+          </div>
+        </div>
+        <div class = "about-block">
+          <div class = "info-text">
+            <h2><a href = "{{ url_for('bodyShop') }}">Body Shop</a></h2>
+            <p>We do body work</p>
+          </div>
+          <img src="{{ url_for('static', filename='images/Harry.jpg') }}" alt="Harry" class ="about-image">
+        </div>
+        <div class = "about-block">
+          <img src="{{ url_for('static', filename='images/Truck_3_and_4.jpg') }}" alt="family_picture" class ="about-image">
+          <div class = "info-text">
+            <h2><a href = "{{ url_for('tow') }}">Towing</a></h2>
+            <p>Since 1985, Harry's Body Shop & Towing has been dedicated to providing reliable roadside assistance, high quality paint services, and professional automotive repairs in Jacksonville, FL. Family-owned and operated, our staff is equipped with years of knowledge and experience in body work, towing, and services.</p>
+          </div>
+        </div>
+          
+        </div>
     </main>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-black-700 text-black p-4 mt-auto">
@@ -110,6 +115,7 @@
           </div>
         </div>
     </footer>
+
 
     <!-- Bootstrap JS Bundle (for navbar toggle) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
