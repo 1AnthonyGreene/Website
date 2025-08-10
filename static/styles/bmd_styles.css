@@ -125,7 +125,7 @@ header nav ul li a:hover {
 
 
 
-    footer {
+footer {
         display: grid;
         grid-template-columns: 1fr auto; /* Left section takes available space, right section is auto-sized */
         align-items: center;

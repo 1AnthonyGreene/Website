@@ -1,5 +1,5 @@
 img {
-  max-width: 50%;
+  max-width: 80%;
   display: block;
   margin: 0 auto;
 }
@@ -57,21 +57,20 @@ header nav ul li a:hover {
 }
 
 
-.image-background {
-  background-image: url("C:\Users\asgre\Documents\GitHub\Website\static\images\Truck_3_and_4.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* Or however tall you want */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  color: white;
-  text-align: center;
-}
-
 .overlay {
   background-color: rgba(0, 0, 0, 0.4); /* optional dark overlay */
   padding: 2rem;
   border-radius: 8px;
+}
+
+.us{
+  text-align: center;
+}
+
+.spacer{
+  background-color: blue;
+}
+
+footer{
+  background-color: black;
 }

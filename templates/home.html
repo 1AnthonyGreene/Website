@@ -69,12 +69,7 @@
       </nav>
     </header>
 
-  <!-- Background Image Div -->
-  <div class = "image-background">
-    <div class = "overlay">
-      <h1>Harry's Body Shop and Towing</h1>
-    </div>
-  </div>
+ 
 
     <!-- Slideshow images -->
 <div id="slideshowIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -106,24 +101,24 @@
   </button>
 </div>
 
-<!--Towing Service Row-->
-<section>
-  <h1 class="text-3xl fw-bold mb-4">Harry's Body Shop and Towing</h1>
+<!--Why Choose Us-->
+<section class ="us">
+  <h1 class="text-3xl fw-bold mb-4">Why Choose Us</h1>
         {% block content %}{% endblock %}
         <div class="row">
           <div class="col-lg-4">
-          <img class="rounded-circle" src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "140px" width="140px">
-            <h2>Service Towing</h2>
+          <img src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "250px" width=auto>
+            <h2>24/7 Towing Services</h2>
             <p>Filler Text</p>
           </div>
           <div class="col-lg-4">
-          <img class="rounded-circle" src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "140px" width="140px">
-            <h2>Accident Recovery</h2>
+          <img src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "250px" width=auto>
+            <h2>Experienced Crew</h2>
             <p>Filler Text</p>
           </div>
           <div class="col-lg-4">
-          <img class="rounded-circle" src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "140px" width="140px">
-            <h2>Heavy Duty Towing</h2>
+          <img src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "250px" width=auto>
+            <h2>Family Owned Business</h2>
             <p>Filler Text</p>
         </div>
       </section>
@@ -133,9 +128,10 @@
     <img class = "rounded circle" src="">
     </div>
   </div>
-
+    <section class = "spacer">
+    </section>
     <!-- Footer -->
-    <footer class="bg-black-700 text-black p-4 mt-auto">
+    <footer class="bg-black-700 text-blue p-4 mt-auto">
         <div class="container">
           <div class="row">
             <div class="col-md-6 mb-3 mb-md-0">
