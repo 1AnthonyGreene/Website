@@ -107,31 +107,38 @@
         {% block content %}{% endblock %}
         <div class="row">
           <div class="col-lg-4">
-          <img src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "250px" width=auto>
+          <img src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "250px" width="300px">
             <h2>24/7 Towing Services</h2>
             <p>Filler Text</p>
           </div>
           <div class="col-lg-4">
-          <img src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "250px" width=auto>
+          <img src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "250px" width="300px">
             <h2>Experienced Crew</h2>
             <p>Filler Text</p>
           </div>
           <div class="col-lg-4">
-          <img src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "250px" width=auto>
+          <img src = "{{ url_for('static', filename='images/Harry.jpg') }}" alt="Generic placeholder image" height = "250px" width="300px">
             <h2>Family Owned Business</h2>
             <p>Filler Text</p>
         </div>
       </section>
-<!-- Service Row-->
- <div class = "service row">
-  <div class = "row">
-    <img class = "rounded circle" src="">
+      
+       <hr class="featurette-divider">
+
+    <!--Services-->
+    <div class="services">
+      <button><a href="{{ url_for('bodyShop') }}">Body Shop</a></button>
+      <button><a href="{{ url_for('tow') }}">Towing</a></button>
+
+
     </div>
-  </div>
-    <section class = "spacer">
-    </section>
+
+    <!-- Spacing -->
+     <div class="color-spacer">
+      <p></p>
+     </div>
     <!-- Footer -->
-    <footer class="bg-black-700 text-blue p-4 mt-auto">
+    <footer class="bg-black-700 p-4 mt-auto">
         <div class="container">
           <div class="row">
             <div class="col-md-6 mb-3 mb-md-0">
@@ -142,7 +149,7 @@
               </div>
             </div>
             <div class="col-md-6 text-md-end">
-              <p>&copy; Harry's Body Shop and Towing. All rights reserved.</p>
+              <p>©Harry's Body Shop and Towing. All rights reserved.</p>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+
 img {
   max-width: 80%;
   display: block;
@@ -67,10 +68,62 @@ header nav ul li a:hover {
   text-align: center;
 }
 
-.spacer{
+.us img {
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover; 
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item img {
+  max-width: 100%;
+}
+
+
+.color-spacer{
+  width:100%;
+  height: 50px;
+  flex-shrink: 0;
   background-color: blue;
 }
 
 footer{
   background-color: black;
+}
+
+.spacer{
+  background-color: blue;
+}
+.contact-info p{
+  color: blue;
+}
+
+.contact-info a{
+  color: blue;
+}
+
+.contact-info a:hover{
+  color: #3399FF;
+}
+
+.col-md-6 text-md-end p{
+  color: blue;
+}
+
+.dropdown-menu {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.services{
+  width: 1000px;
+  height: 1000px;
+  background-image: url("https://www.autotrainingcentre.com/wp-content/uploads/2024/12/DEC-18-auto-body-shop.jpg");
+  background-size: 100%;
 }
