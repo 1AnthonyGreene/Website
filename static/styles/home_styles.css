@@ -122,8 +122,25 @@ footer{
 }
 
 .services{
-  width: 1000px;
-  height: 1000px;
+  flex: 1;
+  display: flex;
+  width: 80%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
   background-image: url("https://www.autotrainingcentre.com/wp-content/uploads/2024/12/DEC-18-auto-body-shop.jpg");
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.tow-service{
+  background-image: url("https://www.autotrainingcentre.com/wp-content/uploads/2024/12/DEC-18-auto-body-shop.jpg");
+
+}
+
+.shop-service{
+  background-image: url("https://www.autotrainingcentre.com/wp-content/uploads/2024/12/DEC-18-auto-body-shop.jpg");
+
 }

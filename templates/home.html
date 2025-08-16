@@ -126,12 +126,44 @@
        <hr class="featurette-divider">
 
     <!--Services-->
-    <div class="services">
-      <button><a href="{{ url_for('bodyShop') }}">Body Shop</a></button>
-      <button><a href="{{ url_for('tow') }}">Towing</a></button>
-
-
-    </div>
+    <section class = "us">
+      <h1 class="text-3xl fw-bold mb-4">Services</h1>
+      <div class = "row">
+        <div class = "col">
+          <div class = "tow-service">
+            <h2>Towing Services</h2>
+            <p>Filler Text</p>
+        </div>
+        </div>
+        <div class = "col">
+          <div class="shop-service">
+            <h2>Body Shop</h2>
+            <p>Filler Text</p>
+            </div>
+            </div>
+            </div>
+      </section>
+    <!--
+    <section class = "services">
+      <div class = "services-towing">
+        <div class = "overlay">
+          <h2>Towing Services</h2>
+          <p>Filler Text</p>
+          <button>
+          <a href="{{ url_for('tow') }}" class="btn">Towing Services</a>
+          </button>
+        </div>
+      </div>
+      <div class = "services-bodyshop">
+        <div class = "overlay">
+          <h2>Body Shop</h2>
+          <button>
+          <a href="{{ url_for('bodyShop') }}">Body Shop</a>
+          </button>
+        </div>
+      </div>
+    </section>
+        -->
 
     <!-- Spacing -->
      <div class="color-spacer">

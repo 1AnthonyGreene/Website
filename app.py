@@ -57,7 +57,7 @@ def contactUs():
         fullName = f"{fName} {lName}".strip()
         msg = Message(
             subject="New Contact Form Submission",
-            sender=app.config['MAIL_USERNAME'],
+            sender=app.config['MAIL m89iu70o-p=, .l_USERNAME'],
             recipients=['harrysbodyshopinc@att.com']
         )
         msg.body = f"From: {fullName} <{email}>\nPhone: {phone}\n\n{message}"
