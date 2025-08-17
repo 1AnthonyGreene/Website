@@ -134,12 +134,31 @@ footer {
         padding: 20px;
         font-size: 14px;
     }
-    
-    .footer-right {
+
+.spacer{
+  background-color: blue;
+}
+.contact-info p{
+  color: blue;
+}
+
+.contact-info a{
+  color: blue;
+}
+
+.contact-info a:hover{
+  color: #3399FF;
+}
+
+.col-md-6 text-md-end p{
+  color: blue !important;
+}
+
+.footer-right {
         text-align: right;
-    }
+}
     
-    .footer-right a {
+.footer-right a {
         color: blue;
     }
  form{
